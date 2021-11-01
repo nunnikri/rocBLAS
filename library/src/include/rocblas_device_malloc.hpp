@@ -19,7 +19,7 @@
 // This header should be included in other projects to use the rocblas_handle
 // C++ device memory allocation API. It is unlikely to change very often.
 
-#include "rocblas/rocblas.h"
+#include "rocblas.h"
 #include <new>
 #include <type_traits>
 
