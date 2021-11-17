@@ -7,14 +7,14 @@
 
 /* library headers */
 
-#include "rocblas.h"
+#include "rocblas/rocblas.h"
 #ifndef WIN32
 #include "rocblas_fortran.hpp"
 #else
 #include "rocblas_no_fortran.hpp"
 #endif
 
-#include "../../library/src/include/utility.hpp"
+#include "utility.hpp"
 
 #if not defined(__clang_major__)
 #define CONSTEXPR constexpr

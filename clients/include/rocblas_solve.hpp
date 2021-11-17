@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "../../library/src/include/utility.hpp"
+#include "utility.hpp"
 #include "cblas_interface.hpp"
-#include "rocblas.h"
+#include "rocblas/rocblas.h"
 
 /*!\file
  * \brief provide common solving utilities
