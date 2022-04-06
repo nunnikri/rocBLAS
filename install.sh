@@ -225,14 +225,14 @@ install_packages( )
                                       "python3" "python3-yaml" "python3-venv" "python3*-pip" )
   local library_dependencies_centos_rhel=( "epel-release" "openssl-devel"
                                       "make" "rpm-build"
-                                      "python34" "python3*-PyYAML" "python3-virtualenv"
+                                      "python36" "python3*-PyYAML" "python3-virtualenv"
                                       "gcc-c++" )
   local library_dependencies_centos_rhel_8=( "epel-release" "openssl-devel"
                                       "make" "rpm-build"
                                       "python3" "python3*-PyYAML" "python3-virtualenv"
                                       "gcc-c++" )
   local library_dependencies_fedora=( "make" "rpm-build"
-                                      "python34" "python3*-PyYAML" "python3-virtualenv"
+                                      "python36" "python3*-PyYAML" "python3-virtualenv"
                                       "gcc-c++" "libcxx-devel" )
   local library_dependencies_sles=(   "make" "libopenssl-devel" "python3-PyYAML" "python3-virtualenv"
                                       "gcc-c++" "libcxxtools9" "rpm-build" )
@@ -262,7 +262,7 @@ install_packages( )
 
   # dependencies to build the client
   local client_dependencies_ubuntu=( "gfortran" "libomp-dev" )
-  local client_dependencies_centos_rhel=( "devtoolset-7-gcc-gfortran" "libgomp" )
+  local client_dependencies_centos_rhel=( "gcc-gfortran" "libgomp" )
   local client_dependencies_centos_rhel_8=( "gcc-gfortran" "libgomp" )
   local client_dependencies_fedora=( "gcc-gfortran" "libgomp" )
   local client_dependencies_sles=( "gcc-fortran" "libgomp1" )

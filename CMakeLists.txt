@@ -196,7 +196,7 @@ if( BUILD_CLIENTS_SAMPLES OR BUILD_CLIENTS_TESTS OR BUILD_CLIENTS_BENCHMARKS )
     set(GFORTRAN_PKG "gcc-fortran")
   endif()
   if(CLIENTS_OS STREQUAL "centos" AND CLIENTS_OS_VERSION EQUAL 7)
-    set(GFORTRAN_PKG "devtoolset-7-gcc-gfortran")
+    set(GFORTRAN_PKG "gcc-gfortran")
   endif()
 
   set( BUILD_CLIENTS ON )

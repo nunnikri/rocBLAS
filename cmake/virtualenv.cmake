@@ -25,10 +25,19 @@ endfunction()
 function(virtualenv_install)
     virtualenv_create()
 
-    message("${VIRTUALENV_BIN_DIR}/${VIRTUALENV_PYTHON_EXENAME} -m pip install ${ARGN}")
+    message("${VIRTUALENV_BIN_DIR}/${VIRTUALENV_PYTHON_EXENAME} -m pip install --upgrade pip ")
     execute_process(
       RESULT_VARIABLE rc
-      COMMAND ${VIRTUALENV_BIN_DIR}/${VIRTUALENV_PYTHON_EXENAME} -m pip install ${ARGN}
+      COMMAND ${VIRTUALENV_BIN_DIR}/${VIRTUALENV_PYTHON_EXENAME} -m pip install --upgrade pip 
+    )
+    if(rc)
+        message(FATAL_ERROR ${rc})
+    endif()
+
+    message("${VIRTUALENV_BIN_DIR}/${VIRTUALENV_PYTHON_EXENAME} -m pip install  ${ARGN}")
+    execute_process(
+      RESULT_VARIABLE rc
+      COMMAND ${VIRTUALENV_BIN_DIR}/${VIRTUALENV_PYTHON_EXENAME} -m pip install  ${ARGN}
     )
     if(rc)
         message(FATAL_ERROR ${rc})
